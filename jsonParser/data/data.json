@@ -1,0 +1,5282 @@
+{
+  "table": [
+    {
+      "Id": 1,
+      "name": "B1",
+      "type": "Booth",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "closest to the door; the most private seat"
+    },
+    {
+      "Id": 2,
+      "name": "T2",
+      "type": "Table",
+      "num_seats": 2,
+      "shape": "square",
+      "description": "small table; not suitable for large meals"
+    },
+    {
+      "Id": 3,
+      "name": "B3",
+      "type": "Booth/Chairs",
+      "num_seats": 6,
+      "shape": "rectangle",
+      "description": "next to fireplace; next to patio doors"
+    },
+    {
+      "Id": 4,
+      "name": "B4",
+      "type": "Booth/Chairs",
+      "num_seats": 6,
+      "shape": "rectangle",
+      "description": "next to patio doors; tucked in wall"
+    },
+    {
+      "Id": 5,
+      "name": "B5",
+      "type": "Booth/Chairs",
+      "num_seats": 4,
+      "shape": "round",
+      "description": "out in the open; little privacy; good for coffee"
+    },
+    {
+      "Id": 6,
+      "name": "B6",
+      "type": "Booth/Chairs",
+      "num_seats": 4,
+      "shape": "round",
+      "description": "almost in corner; next to two doorways"
+    },
+    {
+      "Id": 7,
+      "name": "T7",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "round",
+      "description": "in middle of room; good view of ice cream"
+    },
+    {
+      "Id": 8,
+      "name": "T8",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "in middle of room; good view of ice cream"
+    },
+    {
+      "Id": 9,
+      "name": "B12",
+      "type": "Booth/Chairs",
+      "num_seats": 5,
+      "shape": "rectangle",
+      "description": "folding table; casual; in back room"
+    },
+    {
+      "Id": 10,
+      "name": "B13",
+      "type": "Booth",
+      "num_seats": 6,
+      "shape": "rectangle",
+      "description": "near window; overlooking patio; in back room"
+    },
+    {
+      "Id": 11,
+      "name": "B14",
+      "type": "Booth",
+      "num_seats": 6,
+      "shape": "rectangle",
+      "description": "near window; overlooking patio; in back room"
+    },
+    {
+      "Id": 12,
+      "name": "B15",
+      "type": "Booth",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "in back room; in farthest corner of room"
+    },
+    {
+      "Id": 13,
+      "name": "B16",
+      "type": "Booth",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "in back room; along back wall"
+    },
+    {
+      "Id": 14,
+      "name": "B17",
+      "type": "Booth",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "in back room; along back wall"
+    },
+    {
+      "Id": 15,
+      "name": "B18",
+      "type": "Booth",
+      "num_seats": 4,
+      "shape": "rectangle",
+      "description": "in back room; along back wall; next to fireplace"
+    },
+    {
+      "Id": 16,
+      "name": "T19",
+      "type": "Table",
+      "num_seats": 14,
+      "shape": "rectangle",
+      "description": "in back room; only used for groups larger than 6"
+    },
+    {
+      "Id": 17,
+      "name": "T21",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "round",
+      "description": "in back room; in middle of room"
+    },
+    {
+      "Id": 18,
+      "name": "T22",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "round",
+      "description": "in back room; in middle of room"
+    },
+    {
+      "Id": 19,
+      "name": "P1",
+      "type": "Table",
+      "num_seats": 6,
+      "shape": "rounded rectangle",
+      "description": "on the patio; next to building; next to door"
+    },
+    {
+      "Id": 20,
+      "name": "P2",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "rounded rectangle",
+      "description": "on the patio; next to bike rack"
+    },
+    {
+      "Id": 21,
+      "name": "P3",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "rounded rectangle",
+      "description": "on the patio; next to bike rack"
+    },
+    {
+      "Id": 22,
+      "name": "P4",
+      "type": "Table",
+      "num_seats": 6,
+      "shape": "rounded rectangle",
+      "description": "on the patio; next to building; next to door"
+    },
+    {
+      "Id": 23,
+      "name": "P5",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "square",
+      "description": "on the patio; concrete; has umbrella"
+    },
+    {
+      "Id": 24,
+      "name": "P6",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "square",
+      "description": "on the patio; concrete; has umbrella"
+    },
+    {
+      "Id": 25,
+      "name": "P7",
+      "type": "Table",
+      "num_seats": 4,
+      "shape": "square",
+      "description": "on the patio; concrete; has umbrella"
+    },
+    {
+      "Id": 26,
+      "name": "ToGo",
+      "type": "Take-out order",
+      "num_seats": 0,
+      "shape": "",
+      "description": "orders that are called ahead and packaged to-go"
+    }
+  ],
+  "shifts": [
+    {
+      "tips": 32.93,
+      "holiday": true,
+      "num_people": 19,
+      "num_tables": 5,
+      "payment_received": 359.70,
+      "clocked_in": "2025-09-01T15:57:00-05:00",
+      "clocked_out": "2025-09-01T21:05:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 5,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.17,
+              "tip": 4.83
+            },
+            {
+              "amount": 41.50,
+              "tip": 5.00
+            },
+            {
+              "amount": 18.79,
+              "tip": 1.21
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 24.13,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 18
+            }
+          ],
+          "payments": [
+            {
+              "amount": 65.50,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 7,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 75.47,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 34.68,
+              "tip": 6.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 17.00,
+      "holiday": false,
+      "num_people": 6,
+      "num_tables": 2,
+      "payment_received": 137.49,
+      "clocked_in": "2025-09-04T15:56:00-05:00",
+      "clocked_out": "2025-09-04T20:29:00-05:00",
+      "day_week": "Thu",
+      "tables": [
+        {
+          "num_people": 5,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 56.45,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 53.05,
+              "tip": 10.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 45.09,
+      "holiday": false,
+      "num_people": 19,
+      "num_tables": 6,
+      "payment_received": 412.40,
+      "clocked_in": "2025-09-05T15:55:00-05:00",
+      "clocked_out": "2025-09-04T21:59:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 40.80,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 5,
+          "canceled_items": true,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 50.26,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 18.47,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.56,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 41.45,
+              "tip": 4.55
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 34.09,
+              "tip": 2.19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 39.76,
+      "holiday": false,
+      "num_people": 17,
+      "num_tables": 5,
+      "payment_received": 268.45,
+      "clocked_in": "2025-09-06T15:53:00-05:00",
+      "clocked_out": "2025-09-06T21:33:00-05:00",
+      "day_week": "Sat",
+      "tables": [
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": true,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 74.53,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 31.53,
+              "tip": 3.43
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 18.25,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 76.13,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 14
+            }
+          ],
+          "payments": [
+            {
+              "amount": 29.11,
+              "tip": 10.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 37.44,
+      "holiday": false,
+      "num_people": 13,
+      "num_tables": 5,
+      "payment_received": 259.25,
+      "clocked_in": "2025-09-08T15:57:00-05:00",
+      "clocked_out": "2025-09-08T20:32:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 11.81,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 30.01,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 63.04,
+              "tip": 15.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.56,
+              "tip": 2.44
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 80.20,
+              "tip": 10.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 51.00,
+      "holiday": true,
+      "num_people": 11,
+      "num_tables": 5,
+      "payment_received": 343.79,
+      "clocked_in": "2025-09-11T15:37:00-05:00",
+      "clocked_out": "2025-09-11T20:25:00-05:00",
+      "day_week": "Thu",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.75,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 14.50,
+              "tip": 2.00
+            },
+            {
+              "amount": 20.22,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.02,
+              "tip": 9.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 38.54,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 76.99,
+              "tip": 0.00
+            },
+            {
+              "amount": 10.51,
+              "tip": 15.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 85.03,
+      "holiday": false,
+      "num_people": 35,
+      "num_tables": 11,
+      "payment_received": 607.48,
+      "clocked_in": "2025-09-12T15:49:00-05:00",
+      "clocked_out": "2025-09-12T21:30:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.18,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 25.50,
+              "tip": 15.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 53.63,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 42.41,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 15
+            }
+          ],
+          "payments": [
+            {
+              "amount": 42.41,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 19
+            },
+            {
+              "table_Id": 10
+            }
+          ],
+          "payments": [
+            {
+              "amount": 24.33,
+              "tip": 5.00
+            },
+            {
+              "amount": 18.80,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 41.28,
+              "tip": 9.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 19
+            }
+          ,
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 38.60,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 14
+            }
+          ],
+          "payments": [
+            {
+              "amount": 46.17,
+              "tip": 9.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 70.97,
+              "tip": 5.03
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 56.90,
+              "tip": 8.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 68.38,
+      "holiday": false,
+      "num_people": 24,
+      "num_tables": 8,
+      "payment_received": 428.35,
+      "clocked_in": "2025-09-13T11:00:00-05:00",
+      "clocked_out": "2025-09-13T15:55:00-05:00",
+      "day_week": "Sat",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.40,
+              "tip": 2.60
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 12.62,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.10,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 12.72,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [null],
+          "payments": [
+            {
+              "amount": 16.64,
+              "tip": 3.50
+            },
+            {
+              "amount": 19.33,
+              "tip": 5.00
+            },
+            {
+              "amount": 26.84,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 26
+            },
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 65.03,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 9,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 11.27,
+              "tip": 2.66
+            },
+            {
+              "amount": 14.50,
+              "tip": 5.00
+            },
+            {
+              "amount": 12.88,
+              "tip": 2.67
+            },
+            {
+              "amount": 10.51,
+              "tip": 3.00
+            },
+            {
+              "amount": 17.18,
+              "tip": 2.67
+            },
+            {
+              "amount": 15.48,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 37.31,
+              "tip": 12.64
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 58.69,
+      "holiday": false,
+      "num_people": 28,
+      "num_tables": 11,
+      "payment_received": 450.45,
+      "clocked_in": "2025-09-15T10:31:00-05:00",
+      "clocked_out": "2025-09-15T15:12:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.43,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.51,
+              "tip": 3.00
+            },
+            {
+              "amount": 15.92,
+              "tip": 1.50
+            },
+            {
+              "amount": 20.94,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 29.21,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.74,
+              "tip": 1.26
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 11.70,
+              "tip": 2.00
+            },
+            {
+              "amount": 7.67,
+              "tip": 2.00
+            },
+            {
+              "amount": 7.67,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 15
+            }
+          ],
+          "payments": [
+            {
+              "amount": 26.27,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [null],
+          "payments": [
+            {
+              "amount": 45.96,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.43,
+              "tip": 2.57
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.02,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 42.95,
+              "tip": 4.05
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 64.73,
+              "tip": 9.27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 69.12,
+      "holiday": false,
+      "num_people": 24,
+      "num_tables": 9,
+      "payment_received": 502.06,
+      "clocked_in": "2025-09-16T10:55:00-05:00",
+      "clocked_out": "2025-09-16T15:53:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 23.09,
+              "tip": 5.00
+            },
+            {
+              "amount": 16.64,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 23.35,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 8,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 1
+            },
+            {
+              "table_Id": 19
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.68,
+              "tip": 1.32
+            },
+            {
+              "amount": 20.22,
+              "tip": 2.00
+            },
+            {
+              "amount": 31.14,
+              "tip": 5.00
+            },
+            {
+              "amount": 11.90,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 46.73,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 28.08,
+              "tip": 5.92
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 9.93,
+              "tip": 0.07
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.81,
+              "tip": 7.19
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 31.68,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.11,
+              "tip": 6.89
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 53.35,
+      "holiday": false,
+      "num_people": 14,
+      "num_tables": 5,
+      "payment_received": 652.51,
+      "clocked_in": "2025-09-19T16:26:00-05:00",
+      "clocked_out": "2025-09-19T21:36:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.29,
+              "tip": 20.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 75.27,
+              "tip": 7.00
+            },
+            {
+              "amount": 7.52,
+              "tip": 1.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 1
+            },
+            {
+              "table_Id": 19
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.11,
+              "tip": 2.00
+            },
+            {
+              "amount": 11.81,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 31.14,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.38,
+              "tip": 2.62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 13.00,
+      "holiday": false,
+      "num_people": 7,
+      "num_tables": 3,
+      "payment_received": 101.23,
+      "clocked_in": "2025-09-22T10:59:00-05:00",
+      "clocked_out": "2025-09-01T14:00:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 38.58,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.40,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.81,
+              "tip": 6.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 45.29,
+      "holiday": false,
+      "num_people": 16,
+      "num_tables": 6,
+      "payment_received": 549.07,
+      "clocked_in": "2025-09-23T15:52:00-05:00",
+      "clocked_out": "2025-09-23T21:04:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.81,
+              "tip": null
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 34.84,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.24,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 30.92,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 80.53,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 33.23,
+              "tip": 8.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 53.24,
+      "holiday": false,
+      "num_people": 21,
+      "num_tables": 10,
+      "payment_received": 527.47,
+      "clocked_in": "2025-09-26T10:29:00-05:00",
+      "clocked_out": "2025-09-26T15:53:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 14.23,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.43,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 26.58,
+              "tip": 5.42
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 30.07,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 28.35,
+              "tip": 1.65
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.29,
+              "tip": 3.71
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 15
+            }
+          ],
+          "payments": [
+            {
+              "amount": 54.19,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 21.21,
+              "tip": 4.79
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 47.78,
+              "tip": 20.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 38.72,
+              "tip": 3.28
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 58.63,
+      "holiday": false,
+      "num_people": 25,
+      "num_tables": 7,
+      "payment_received": 660.97,
+      "clocked_in": "2025-09-29T15:46:00-05:00",
+      "clocked_out": "2025-09-29T20:55:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.39,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 47.56,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 7,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 98.32,
+              "tip": 18.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 19.86,
+              "tip": 4.14
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 76.56,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 22.82,
+              "tip": 2.18
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 65.05,
+              "tip": 12.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 48.55,
+      "holiday": false,
+      "num_people": 11,
+      "num_tables": 6,
+      "payment_received": 483.47,
+      "clocked_in": "2025-09-30T10:48:00-05:00",
+      "clocked_out": "2025-09-30T15:39:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 19.86,
+              "tip": 4.00
+            },
+            {
+              "amount": 16.64,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ,
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 33.73,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 25.99,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [null],
+          "payments": [
+            {
+              "amount": 6.44,
+              "tip": 1.56
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 34.83,
+              "tip": 6.00
+            },
+            {
+              "amount": 30.75,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 25.99,
+              "tip": 5.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 46.93,
+      "holiday": false,
+      "num_people": 20,
+      "num_tables": 5,
+      "payment_received": 561.56,
+      "clocked_in": "2025-10-02T15:53:00-05:00",
+      "clocked_out": "2025-10-02T20:31:00-05:00",
+      "day_week": "Thu",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.40,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 63.08,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 9,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 47.78,
+              "tip": 10.00
+            },
+            {
+              "amount": 26.05,
+              "tip": 8.95
+            },
+            {
+              "amount": 12.62,
+              "tip": 5.00
+            },
+            {
+              "amount": 15.57,
+              "tip": 7.43
+            },
+            {
+              "amount": 6.17,
+              "tip": 3.83
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 54.76,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 33.61,
+              "tip": 6.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 32.48,
+      "holiday": false,
+      "num_people": 10,
+      "num_tables": 5,
+      "payment_received": 580.88,
+      "clocked_in": "2025-10-03T15:53:00-05:00",
+      "clocked_out": "2025-10-03T21:20:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 7.95,
+              "tip": 1.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 18.79,
+              "tip": 5.21
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.81,
+              "tip": 4.19
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.05,
+              "tip": 9.00
+            },
+            {
+              "amount": 17.90,
+              "tip": 6.10
+            },
+            {
+              "amount": 21.17,
+              "tip": 3.83
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 41.34,
+              "tip": 3.66
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 49.85,
+      "holiday": false,
+      "num_people": 18,
+      "num_tables": 7,
+      "payment_received": 490.81,
+      "clocked_in": "2025-10-04T15:55:00-05:00",
+      "clocked_out": "2025-10-04T20:03:00-05:00",
+      "day_week": "Sat",
+      "tables": [
+        {
+          "num_people": 13,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.20,
+              "tip": 1.00
+            },
+            {
+              "amount": 25.23,
+              "tip": 1.00
+            },
+            {
+              "amount": 21.74,
+              "tip": 1.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.65,
+              "tip": 4.35
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 81.04,
+              "tip": 15.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 12.89,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 13
+            }
+          ],
+          "payments": [
+            {
+              "amount": 41.07,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            },
+            {
+              "table_Id": 23
+            }
+          ],
+          "payments": [
+            {
+              "amount": 26.82,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": true,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 14
+            }
+          ],
+          "payments": [
+            {
+              "amount": 13.82,
+              "tip": 2.50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 49.93,
+      "holiday": false,
+      "num_people": 21,
+      "num_tables": 8,
+      "payment_received": 353.42,
+      "clocked_in": "2025-10-06T10:19:00-05:00",
+      "clocked_out": "2025-10-06T15:55:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 33.60,
+              "tip": 6.40
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 18.79,
+              "tip": 4.21
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 12.72,
+              "tip": 4.00
+            },
+            {
+              "amount": 13.42,
+              "tip": 4.00
+            },
+            {
+              "amount": 9.95,
+              "tip": 1.00
+            },
+            {
+              "amount": 9.95,
+              "tip": 2.00
+            },
+            {
+              "amount": 21.85,
+              "tip": 2.00
+            },
+            {
+              "amount": 12.35,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 12,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.95,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 24.48,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 21.74,
+              "tip": 4.26
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.11,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 32.48,
+              "tip": 0.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 37.19,
+      "holiday": false,
+      "num_people": 15,
+      "num_tables": 4,
+      "payment_received": 439.21,
+      "clocked_in": "2025-10-07T15:52:00-05:00",
+      "clocked_out": "2025-10-07T20:28:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 71.14,
+              "tip": 3.86
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": true,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.15,
+              "tip": 3.33
+            },
+            {
+              "amount": 25.80,
+              "tip": 3.34
+            },
+            {
+              "amount": 23.27,
+              "tip": 3.33
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 46.09,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 37.85,
+              "tip": 5.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 30.50,
+      "holiday": false,
+      "num_people": 9,
+      "num_tables": 3,
+      "payment_received": 658.39,
+      "clocked_in": "2025-10-09T15:57:00-05:00",
+      "clocked_out": "2025-10-09T20:18:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 25.77,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 4.50,
+              "tip": 0.50
+            },
+            {
+              "amount": 5.25,
+              "tip": 0.00
+            },
+            {
+              "amount": 28.76,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 5,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 108.06,
+              "tip": 20.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 36.94,
+      "holiday": false,
+      "num_people": 13,
+      "num_tables": 7,
+      "payment_received": 679.52,
+      "clocked_in": "2025-10-10T15:54:00-05:00",
+      "clocked_out": "2025-10-10T20:51:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 32.75,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 44.24,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 12.89,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 26
+            }
+          ,
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.75,
+              "tip": 3.25
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 49.18,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 26
+            },
+            {
+              "table_Id": 15
+            }
+          ],
+          "payments": [
+            {
+              "amount": 51.59,
+              "tip": 3.41
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 33.73,
+              "tip": 5.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 47.76,
+      "holiday": false,
+      "num_people": 20,
+      "num_tables": 7,
+      "payment_received": 902.07,
+      "clocked_in": "2025-10-11T14:56:00-05:00",
+      "clocked_out": "2025-10-11T21:19:00-05:00",
+      "day_week": "Sat",
+      "tables": [
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 41.48,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 31.41,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 24.33,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 5,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": true,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 3
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.94,
+              "tip": 0.00
+            },
+            {
+              "amount": 17.18,
+              "tip": 0.00
+            },
+            {
+              "amount": 23.35,
+              "tip": 0.00
+            },
+            {
+              "amount": 20.13,
+              "tip": 5.00
+            },
+            {
+              "amount": 32.78,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 18
+            }
+          ],
+          "payments": [
+            {
+              "amount": 60.83,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.64,
+              "tip": 3.36
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 45.90,
+              "tip": 10.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 79.82,
+      "holiday": true,
+      "num_people": 36,
+      "num_tables": 9,
+      "payment_received": 704.57,
+      "clocked_in": "2025-10-13T10:53:00-05:00",
+      "clocked_out": "2025-10-13T17:15:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 19.68,
+              "tip": 0.32
+            },
+            {
+              "amount": 13.96,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 47.11,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 11,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 120.00,
+              "tip": 7.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.40,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 9,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 23.30,
+              "tip": 7.25
+            },
+            {
+              "amount": 23.28,
+              "tip": 7.25
+            },
+            {
+              "amount": 23.26,
+              "tip": 7.25
+            },
+            {
+              "amount": 23.20,
+              "tip": 7.25
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 57.48,
+              "tip": 9.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 22.90,
+              "tip": 2.80
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 53.20,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.11,
+              "tip": 5.89
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 77.62,
+      "holiday": false,
+      "num_people": 33,
+      "num_tables": 7,
+      "payment_received": 596.12,
+      "clocked_in": "2025-10-14T15:54:00-05:00",
+      "clocked_out": "2025-10-14T21:32:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 19.86,
+              "tip": 5.14
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 37.21,
+              "tip": 3.79
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 13.96,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 24.32,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 20,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 48.86,
+              "tip": 5.00
+            },
+            {
+              "amount": 58.90,
+              "tip": 11.10
+            },
+            {
+              "amount": 58.88,
+              "tip": 11.12
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 29.80,
+              "tip": 6.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 59.17,
+              "tip": 10.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 44.67,
+      "holiday": false,
+      "num_people": 24,
+      "num_tables": 8,
+      "payment_received": 902.92,
+      "clocked_in": "2025-10-20T15:50:00-05:00",
+      "clocked_out": "2025-10-20T20:30:00-05:00",
+      "day_week": "Mon",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.91,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 39.19,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 10,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 92.96,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 14.07,
+              "tip": 1.93
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 82.09,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": true,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 20.90,
+              "tip": 6.60
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 32.88,
+              "tip": 8.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 32.88,
+              "tip": 8.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 31.24,
+      "holiday": false,
+      "num_people": 13,
+      "num_tables": 5,
+      "payment_received": 289.01,
+      "clocked_in": "2025-10-21T10:52:00-05:00",
+      "clocked_out": "2025-10-21T03:49:00-05:00",
+      "day_week": "Tue",
+      "tables": [
+        {
+          "num_people": 8,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 23.09,
+              "tip": 4.00
+            },
+            {
+              "amount": 9.48,
+              "tip": 2.00
+            },
+            {
+              "amount": 29.86,
+              "tip": 5.00
+            },
+            {
+              "amount": 11.00,
+              "tip": 2.00
+            },
+            {
+              "amount": 22.01,
+              "tip": 15.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 22.01,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.11,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 9.40,
+              "tip": 3.08
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 34.90,
+              "tip": 4.10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 28.39,
+      "holiday": false,
+      "num_people": 16,
+      "num_tables": 6,
+      "payment_received": 389.01,
+      "clocked_in": "2025-10-23T10:56:00-05:00",
+      "clocked_out": "2025-10-23T15:47:00-05:00",
+      "day_week": "Thu",
+      "tables": [
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 26.17,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.23,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 10.74,
+              "tip": 2.26
+            },
+            {
+              "amount": 10.74,
+              "tip": 4.26
+            },
+            {
+              "amount": 13.69,
+              "tip": 4.00
+            },
+            {
+              "amount": 10.74,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 47.03,
+              "tip": 5.97
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.58,
+              "tip": 2.00
+            }
+          ]
+        },
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 11.61,
+              "tip": 3.00
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 38.90,
+      "holiday": false,
+      "num_people": 20,
+      "num_tables": 9,
+      "payment_received": 623.49,
+      "clocked_in": "2025-10-24T10:51:00-05:00",
+      "clocked_out": "2025-10-24T16:13:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 25.77,
+              "tip": 4.23
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 5
+            }
+          ],
+          "payments": [
+            {
+              "amount": 30.12,
+              "tip": 9.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 27.65,
+              "tip": 3.00
+            },
+            {
+              "amount": 17.72,
+              "tip": 0.00
+            },
+            {
+              "amount": 20.40,
+              "tip": 0.10
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 22.01,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 6
+            }
+          ],
+          "payments": [
+            {
+              "amount": 30.60,
+              "tip": 4.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 51.97,
+              "tip": 4.03
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 8
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.91,
+              "tip": 6.09
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 16.86,
+              "tip": 3.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": false,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 29.80,
+              "tip": 6.20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 41.03,
+      "holiday": true,
+      "num_people": 20,
+      "num_tables": 4,
+      "payment_received": 628.08,
+      "clocked_in": "2025-10-01T10:49:00-05:00",
+      "clocked_out": "2025-10-01T16:00:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 8,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 16
+            }
+          ],
+          "payments": [
+            {
+              "amount": 135.29,
+              "tip": 30.00
+            }
+          ]
+        },
+        {
+          "num_people": 2,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": true,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 31.03,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 7,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 32.91,
+              "tip": 0.00
+            }
+          ]
+        },
+        {
+          "num_people": 3,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 1
+            }
+          ],
+          "payments": [
+            {
+              "amount": 35.97,
+              "tip": 6.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tips": 36.10,
+      "holiday": true,
+      "num_people": 11,
+      "num_tables": 3,
+      "payment_received": 532.02,
+      "clocked_in": "2025-10-31T16:00:00-05:00",
+      "clocked_out": "2025-10-31T21:41:00-05:00",
+      "day_week": "Fri",
+      "tables": [
+        {
+          "num_people": 1,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": false,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 2
+            }
+          ],
+          "payments": [
+            {
+              "amount": 22.29,
+              "tip": 5.00
+            }
+          ]
+        },
+        {
+          "num_people": 4,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": true,
+          "appetizer": true,
+          "alcohol": false,
+          "special": false,
+          "multiple_payment": true,
+          "diner": [
+            {
+              "table_Id": 7
+            }
+          ],
+          "payments": [
+            {
+              "amount": 17.99,
+              "tip": 4.00
+            },
+            {
+              "amount": 51.15,
+              "tip": 10.00
+            }
+          ]
+        },
+        {
+          "num_people": 6,
+          "canceled_items": false,
+          "friend": false,
+          "pizza": true,
+          "ice_cream": false,
+          "appetizer": true,
+          "alcohol": false,
+          "special": true,
+          "multiple_payment": false,
+          "diner": [
+            {
+              "table_Id": 4
+            }
+          ],
+          "payments": [
+            {
+              "amount": 107.80,
+              "tip": 12.20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
