@@ -47,6 +47,7 @@ class JsonParser:
 		# Store the generated SQL statements
 		sql_list = []
 
+		# function to generate sql
 		def build_insert_statement(table, record, parent_id, record_id):
 			sql = f"INSERT INTO `{table.name}` ("
 
@@ -94,8 +95,11 @@ class JsonParser:
 			sql += ", ".join(values) + ");"
 
 			return sql
+
+		# function to find all data
 		def recursive_fill(json_obj, parent_id, parent_table_name):
 			# check for maximum recursive depth
+			# fixme: does not generate valid sql if it reaches max depth
 			self.depth += 1
 			if self.depth > self.ALLOWED_DEPTH:
 				self.depth = 0
@@ -162,6 +166,7 @@ class JsonParser:
 	def create_db_schema(self, start_json=None, parent=None) -> list:
 		def find_tables(start_json=None, parent=None):
 			# check for maximum recursive depth
+			# fixme: this does not generate valid sql if it reaches end of depth
 			self.depth += 1
 			if self.depth > self.ALLOWED_DEPTH:
 				self.depth = 0
