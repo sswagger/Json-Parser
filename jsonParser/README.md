@@ -12,6 +12,15 @@ Takes a JSON object and parse it into a database.
   * Sam Swagger
   * Limited help from Qwen Coder
 
+## Future plan
+* Make CLI more intuitive
+* Automatically create a database if it doesn't exist
+
+## Project Story
+I originally had a lot of data that I wanted to build a database out of.
+However, I didn't really want to write a long SQL statement to parse it into a database.
+So instead, I built this app to interpret my data into a database schema based on the JSON object.
+
 ## How to run
 Install [anaconda](https://www.anaconda.com/download) or [mini-conda](https://www.anaconda.com/download) (further reading [here](https://www.anaconda.com/docs/getting-started/concepts/anaconda-or-miniconda)).
 Then run the following at the project root in a conda terminal session:
