@@ -27,7 +27,7 @@ conda activate restaurant-stats
 The terminal prompt line should look similar to this `(restaurant-stats) your/current/path> `.
 Then run the following to start JSON PARSER:
 ```bash
-python ./jsonParser/JsonParser.py
+python ./jsonParser/CLI.py
 ```
 
 ## Notes
