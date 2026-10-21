@@ -163,7 +163,7 @@ class JsonParser:
 		else:
 			return ""
 
-	def create_db_schema(self, start_json=None, parent=None) -> list:
+	def create_db_schema(self, start_json=None, parent=None) -> list[Table]:
 		def find_tables(start_json=None, parent=None):
 			# check for maximum recursive depth
 			# fixme: this does not generate valid sql if it reaches end of depth
