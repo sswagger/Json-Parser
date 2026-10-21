@@ -60,8 +60,10 @@ class CLI(cmd.Cmd):
 		print(r"sql [create || fill]               ║  generate the 'CREATE' sql or the 'INSERT' sql and save to memory")
 		print(r"sql memory                         ║  show what is in the sql memory")
 		print(r"sql execute                        ║  execute the sql that is in memory")
+		print(r"sql clear                          ║  clear sql in memory")
+		print(r"sql 'sql'                          ║  save your own sql to memory")
 		print(r"quit                               ║  exit JSON PARSER")
-		print(r"'any-command' ?                   ║  give a more complete description about the command")
+		print(r"'any-command' ?                    ║  give a more complete description about the command")
 		print()
 		print(self.color.get_color("header") + r"JSON PARSER: created by sswagger" + self.color.neutral)
 
@@ -136,11 +138,13 @@ class CLI(cmd.Cmd):
 	def do_sql(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`sql` command:" + self.color.neutral)
-			print("\t`sql [create || fill || memory || execute]`")
+			print("\t`sql [create || fill || memory || execute || clear || 'sql']`")
 			print("\t`sql create`: generate the 'CREATE TABLE' sql and save to memory")
 			print("\t`sql fill`: generate the 'INSERT INTO TABLE' sql and save to memory")
 			print("\t`sql memory`: read sql in memory")
 			print("\t`sql execute`: run the sql that is in memory")
+			print("\t`sql clear`: clear memory")
+			print("\t`sql ['sql']`: save your own sql to memory")
 			return
 
 		match arg:
@@ -188,8 +192,15 @@ class CLI(cmd.Cmd):
 				except mysql.connector.Error:
 					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
 					print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
-			# todo: add `sql clear`
-			# todo: add `sql execute "my query"`
+
+			case "clear":
+				self.sql = []
+				print("sql memory cleared successfully")
+
+			case _:
+				self.sql = [arg]
+				print("sql saved to memory successfully")
+				print("run `sql execute` to run your sql")
 
 	def do_quit(self, arg: str):
 		if "?" in arg:
