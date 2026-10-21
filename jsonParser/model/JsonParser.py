@@ -7,7 +7,7 @@ from model.table import Table
 # TODO: allow user the ability to create a database
 #=== jsonParser class ===#
 class JsonParser:
-	def __init__(self):
+	def __init__(self, config=""):
 		self.jsonObj = {}
 		self.json_config = {}
 		self.tables:list[Table] = []
@@ -15,23 +15,44 @@ class JsonParser:
 		self.ALLOWED_DEPTH = 10
 		self.datapath = "data/data.json"
 		self.db = ""
+		self.port = 3306
+		self.username = "root"
+		self.password = "root"
+		self.host = "localhost"
 
 		# get data from file
 		try:
-			with open("config.json", "r") as c:
-				self.json_config = json.load(c)
-				try:
-					self.ALLOWED_DEPTH = self.json_config["recursive_depth"]
-				except AttributeError:
-					pass
-				try:
-					self.datapath = self.json_config["data_path"]
-				except AttributeError:
-					pass
-				try:
-					self.db = self.json_config["database_name"]
-				except AttributeError:
-					pass
+			if config:
+				with open(config, "r") as c:
+					self.json_config = json.load(c)
+					try:
+						self.ALLOWED_DEPTH = self.json_config["recursive_depth"]
+					except AttributeError:
+						pass
+					try:
+						self.datapath = self.json_config["data_path"]
+					except AttributeError:
+						pass
+					try:
+						self.db = self.json_config["database_name"]
+					except AttributeError:
+						pass
+					try:
+						self.port = int(self.json_config["port"])
+					except AttributeError or ValueError:
+						pass
+					try:
+						self.username = self.json_config["user"]
+					except AttributeError:
+						pass
+					try:
+						self.password = self.json_config["pass"]
+					except AttributeError:
+						pass
+					try:
+						self.host = self.json_config["host"]
+					except AttributeError:
+						pass
 			self.read_json()
 		except FileNotFoundError:
 			return
@@ -276,10 +297,10 @@ class JsonParser:
 		if len(self.jsonObj) > 0 and len(str(self.db)) > 0:
 			# Connect to MySQL
 			conn = mysql.connector.connect(
-				host="localhost",
-				port=3306,
-				user="root",
-				password="root",
+				host=self.host,
+				port=self.port,
+				user=self.username,
+				password=self.password,
 				database=self.db
 			)
 			cursor = conn.cursor()
@@ -290,6 +311,21 @@ class JsonParser:
 			conn.close()
 		else:
 			raise DatabaseError("Data Path or Database Name not specified")
+
+	def create_db(self) -> None:
+		# Connect to MySQL
+		conn = mysql.connector.connect(
+			host=self.host,
+			port=self.port,
+			user=self.username,
+			password=self.password
+		)
+		cursor = conn.cursor()
+
+		cursor.execute(f"CREATE DATABASE {self.db}")
+		conn.commit()
+		cursor.close()
+		conn.close()
 
 	def read_json(self) -> None:
 		with open(self.datapath, "r") as file:
@@ -309,5 +345,9 @@ class JsonParser:
 		self.json_config["recursive_depth"] = self.ALLOWED_DEPTH
 		self.json_config["data_path"] = self.datapath
 		self.json_config["database_name"] = self.db
+		self.json_config["port"] = self.port
+		self.json_config["user"] = self.username
+		self.json_config["pass"] = self.password
+		self.json_config["host"] = self.host
 		with open("config.json", "w") as file:
 			file.write(json.dumps(self.json_config))

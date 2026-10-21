@@ -29,7 +29,7 @@ class CLI(cmd.Cmd):
 	def __init__(self):
 		super().__init__()
 		self.sql = []
-		self.database = JsonParser()
+		self.database = JsonParser("config.json")
 
 		self.color = Color()
 		self.color.new_color("prompt", 0, 191, 0)
@@ -189,9 +189,16 @@ class CLI(cmd.Cmd):
 					for i in self.sql:
 						self.database.execute_sql(i)
 					print("All sql successfully run")
-				except mysql.connector.Error:
-					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-					print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
+				except mysql.connector.Error as e:
+					print(e.msg)
+
+					new_db = input(f"Databases does not exist. Do you want to create a new one called {self.database.db}? [Y]es/[n]o : ")
+					if new_db == "y":
+						self.database.create_db()
+						print(f"Successfully created {self.database.db}")
+					else:
+						print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
+						print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'` and set it to a valid database, or type `help` for docs")
 
 			case "clear":
 				self.sql = []
@@ -199,6 +206,7 @@ class CLI(cmd.Cmd):
 
 			case _:
 				self.sql = [arg]
+				print(f"{arg}\n")
 				print("sql saved to memory successfully")
 				print("run `sql execute` to run your sql")
 
