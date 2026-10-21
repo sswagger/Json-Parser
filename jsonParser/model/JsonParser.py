@@ -4,7 +4,6 @@ import mysql.connector
 from mysql.connector import DatabaseError
 from model.table import Table
 
-# TODO: allow user the ability to create a database
 #=== jsonParser class ===#
 class JsonParser:
 	def __init__(self, config=""):
@@ -119,18 +118,16 @@ class JsonParser:
 
 		# function to find all data
 		def recursive_fill(json_obj, parent_id, parent_table_name):
-			# check for maximum recursive depth
-			# fixme: does not generate valid sql if it reaches max depth
-			self.depth += 1
-			if self.depth > self.ALLOWED_DEPTH:
-				self.depth = 0
-				return
-
 			# loop through json
 			for key, value in json_obj.items():
 				if type(value) is dict:
-					# Recurse into nested dict
-					recursive_fill(value, parent_id, parent_table_name)
+					if self.depth < self.ALLOWED_DEPTH:
+						# Recurse into nested dict
+						self.depth += 1
+						recursive_fill(value, parent_id, parent_table_name)
+					else:
+						continue
+
 				elif type(value) is list:
 					# This is a table
 					table_name = key
@@ -164,34 +161,33 @@ class JsonParser:
 								table_counters[table_name] += 1
 								record_id = table_counters[table_name]
 
-							# Build INSERT statement
-							sql = build_insert_statement(curr_table, record, parent_id, record_id)
-							sql_list.append(sql)
+							# check for maximum recursive depth
+							if self.depth < self.ALLOWED_DEPTH:
+								self.depth += 1
 
-							# Recursively process any nested lists in this record
-							recursive_fill(record, record_id, table_name)
-
+								# Build INSERT statement
+								sql = build_insert_statement(curr_table, record, parent_id, record_id)
+								sql_list.append(sql)
+								# Recursively process any nested lists in this record
+								recursive_fill(record, record_id, table_name)
+							else:
+								continue
 					# Reset counter after processing this table (for top-level tables)
 					if parent_table_name is None:
 						table_counters[table_name] = 0
+			self.depth -= 1
 
 		if len(self.jsonObj) > 0 and len(str(self.db)) > 0:
 			# Start the recursive processing
 			recursive_fill(whole_json, parent_id, parent_table_name)
 			self.depth = 0
-			# return sql
+			# return the sql
 			return "\n".join(sql_list)
 		else:
 			return ""
 
 	def create_db_schema(self, start_json=None, parent=None) -> list[Table]:
 		def find_tables(start_json=None, parent=None):
-			# check for maximum recursive depth
-			# fixme: this does not generate valid sql if it reaches end of depth
-			self.depth += 1
-			if self.depth > self.ALLOWED_DEPTH:
-				self.depth = 0
-				return Table()
 			# get data
 			whole_json = start_json
 			if whole_json is None:
@@ -214,8 +210,13 @@ class JsonParser:
 						# create a new table, and add the name
 						child_table = Table()
 						child_table.add_name(k)
-						# get the columns from it
-						child_table.copy_columns(find_tables(whole_json.get(k)[0], child_table))
+						# check for maximum recursive depth
+						if self.depth < self.ALLOWED_DEPTH:
+							self.depth += 1
+							# get the columns from it
+							child_table.copy_columns(find_tables(whole_json.get(k)[0], child_table))
+						else:
+							continue
 
 						# add current table's name as parent
 						if parent is not None:
@@ -253,12 +254,14 @@ class JsonParser:
 					# decimal
 					new_table.add_column(k, None, "DECIMAL(5, 2)", True)
 
+			self.depth -= 1
 			if not new_table.json_id :
 				new_table.add_column("Id", None, "INTEGER", False)
 
 			return new_table
 
 		if len(self.jsonObj) > 0 and len(str(self.db)) > 0:
+			self.tables = []
 			# call recursive loop
 			find_tables(start_json, parent)
 			# reset depth and return tables
@@ -272,7 +275,7 @@ class JsonParser:
 		self.depth += 1
 		if self.depth > self.ALLOWED_DEPTH:
 			self.depth = 0
-			return ""
+			return "MAX RECURSIVE DEPTH"
 		# get or set json object
 		json_obj = start_json
 		if json_obj is None:

@@ -155,7 +155,7 @@ class CLI(cmd.Cmd):
 						self.sql.append(i.create_sql())
 						print(i.create_sql())
 
-					print("sql saved in memory run `sql execute` to run memory.")
+					print("\nsql saved in memory run `sql execute` to run memory.")
 				except AttributeError:
 					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
 					print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")

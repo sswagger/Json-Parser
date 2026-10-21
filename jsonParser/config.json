@@ -1,1 +1,1 @@
-{"recursive_depth": 5, "data_path": "data/data.json", "database_name": "statsDB", "port": 3306, "user": "root", "pass": "root", "host": "localhost"}
+{"recursive_depth": 10, "data_path": "data/data.json", "database_name": "statsDB", "port": 3306, "user": "root", "pass": "root", "host": "localhost"}
