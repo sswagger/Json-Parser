@@ -39,6 +39,9 @@ Then run the following to start JSON PARSER:
 python ./jsonParser/CLI.py
 ```
 
+For the mysql database, you can use any reachable database as configured in `config.json`.
+If you want to use a database that is compatible with my MCP server, you can find the `docker-compose.yml` file [here](https://github.com/sswagger/Restaurant-Stats/blob/main/docker-compose.yml).
+
 ## Notes
 For using your own JSON object, there are some restrictions on how the JSON can be formatted:
 1.  Every list of objects in interpreted as a new table.  
