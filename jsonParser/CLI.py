@@ -50,6 +50,7 @@ class CLI(cmd.Cmd):
 		print(r"[flag:input] = flag")
 		print(r"|| = or")
 		print(r"?? = optional")
+		print(r"For directory delimiters use the forwardslash (/) not the backslash (\)")
 		print()
 		print(self.color.get_color("header") + r"COMMAND                              ║  DESCRIPTION                                                           " + self.color.neutral)
 		print(r"help                                 ║  lists all commands and their descriptions")
@@ -144,13 +145,13 @@ class CLI(cmd.Cmd):
 	def do_sql(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`sql` command:" + self.color.neutral)
-			print("\t`sql create || fill || memory || execute || clear || export [--file-name || -f : 'name'] || 'sql'`")
+			print("\t`sql create || fill || memory || execute || clear || export [--file-name || -f : 'name']?? || 'sql'`")
 			print("\t`sql create`: generate the 'CREATE TABLE' sql and save to memory")
 			print("\t`sql fill`: generate the 'INSERT INTO TABLE' sql and save to memory")
 			print("\t`sql memory`: read sql in memory")
 			print("\t`sql execute`: run the sql that is in memory")
 			print("\t`sql clear`: clear memory")
-			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file, default file name is the current datetime")
+			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file; default file name is the current datetime")
 			print("\t`sql ['sql']`: save your own sql to memory")
 			return
 
@@ -212,7 +213,7 @@ class CLI(cmd.Cmd):
 
 		elif "export" in arg:
 			# set file name to current time
-			file_name = str(datetime.now())
+			file_name = str(datetime.now().strftime('%Y-%m-%d_%H-%M'))
 
 			# if the user specifies a different name, the re-set the file name
 			if "export" != arg.strip():
@@ -226,6 +227,10 @@ class CLI(cmd.Cmd):
 					return
 
 				file_name = args.file_name
+
+			file_name = file_name.replace(" ", "_")
+			file_name = file_name.replace("\\", "_")
+			file_name = file_name.replace(".", "-")
 
 			# save sql to file
 			with open(f"sql/{file_name}.sql", "w") as file:
