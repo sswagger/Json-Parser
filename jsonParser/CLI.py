@@ -58,6 +58,7 @@ class CLI(cmd.Cmd):
 		print(r"set [--json : 'path']                ║  set the datapath")
 		print(r"set [--recursion-depth : 'integer']  ║  set the maximum number of recursive loops")
 		print(r"get                                  ║  show config variables")
+		print(r"save                                 ║  save config to config.josn")
 		print(r"read 'path'??                        ║  read data from data/data.json or specified path (must be json file)")
 		print(r"sql create                           ║  generate the 'CREATE' sql and save to memory")
 		print(r"sql fill                             ║  generate the 'INSERT' sql and save to memory")
@@ -65,6 +66,7 @@ class CLI(cmd.Cmd):
 		print(r"sql execute                          ║  execute the sql that is in memory")
 		print(r"sql clear                            ║  clear sql in memory")
 		print(r"sql export [--file-name : 'name']??  ║  export the sql in memory into a file")
+		print(r"sql import [--file-name : 'name']    ║  import sql statements from a file")
 		print(r"sql 'sql'                            ║  save your own sql to memory")
 		print(r"quit                                 ║  exit JSON PARSER")
 		print(r"'any-command' ?                      ║  give a more complete description about the command")
@@ -74,8 +76,9 @@ class CLI(cmd.Cmd):
 	def do_set(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`set` command:" + self.color.neutral)
-			print("\t`set [--db-name || -n : 'name']?? [--json || -j : 'path']?? [--recursion-depth || -r : 'integer']??`")
-			print("\tThis command will sets the config variables for future commands")
+			print("\t`set [--db-name || -n : 'name']`: sets the database name")
+			print("\t`set [--json || -j : 'path']`: sets the path to the json file")
+			print("\t`set [--recursion-depth || -r : 'integer']`: sets the maximum depth for recursive loops")
 			return
 		parser = argparse.ArgumentParser(prog="setdb", add_help=False)
 		parser.add_argument("--db-name", "-n", required=False)
@@ -101,8 +104,11 @@ class CLI(cmd.Cmd):
 	def do_get(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`get` command:" + self.color.neutral)
-			print("\t`get json || db-name || recursion-depth || sql??`")
-			print("\tThis command will show you the current config settings")
+			print("\t`get`: gets all configs")
+			print("\t`get json??`: gets path to the json file")
+			print("\t`get db-name??`: gets name of the database")
+			print("\t`get recursion-depth??`: gets the configured recursion depth")
+			print("\t`get sql??`: tells you how to view the sql in memory")
 			return
 
 		match arg:
@@ -119,11 +125,20 @@ class CLI(cmd.Cmd):
 				print(f"Database Name: {self.database.db}")
 				print(f"Recursion Depth Limit: {self.database.ALLOWED_DEPTH}")
 
+	def do_save(self, arg: str):
+		if "?" in arg:
+			print(self.color.get_color("header") + "`save` command:" + self.color.neutral)
+			print("\t`save`: saves the current config settings to configs.json")
+			return
+
+		self.database.save_config()
+		print("Config saved successfully")
+
 	def do_read(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`read` command:" + self.color.neutral)
-			print("\t`read 'path'??`")
-			print("\tread data a specified path (must be json file), default path is whatever is specified in the configs")
+			print("\t`read`: reads json from the datafile specified in configs.json")
+			print("\t`read 'path'??`: read data a specified path (must be json file)")
 			return
 
 		try:
@@ -140,19 +155,19 @@ class CLI(cmd.Cmd):
 
 		except FileNotFoundError:
 			print(f"{self.color.get_color("error")}ERROR: in command `read {arg}`{self.color.neutral}")
-			print("File not found\n\tTo resolve this run `set --json 'path'`, or type `help` for docs")
+			print("File not found\n\tTo resolve this run `set [--json : 'path']`, or type `help` for docs")
 
 	def do_sql(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`sql` command:" + self.color.neutral)
-			print("\t`sql create || fill || memory || execute || clear || export [--file-name || -f : 'name']?? || 'sql'`")
 			print("\t`sql create`: generate the 'CREATE TABLE' sql and save to memory")
 			print("\t`sql fill`: generate the 'INSERT INTO TABLE' sql and save to memory")
 			print("\t`sql memory`: read sql in memory")
 			print("\t`sql execute`: run the sql that is in memory")
 			print("\t`sql clear`: clear memory")
 			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file; default file name is the current datetime")
-			print("\t`sql ['sql']`: save your own sql to memory")
+			print("\t`sql import [--file-name || -f : 'name']`: imports sql statements from a specified file")
+			print("\t`sql 'sql'`: save your own sql to memory")
 			return
 
 		if arg == "create":
@@ -165,7 +180,7 @@ class CLI(cmd.Cmd):
 				print("\nsql saved in memory run `sql execute` to run memory.")
 			except AttributeError:
 				print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-				print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
+				print("No database selected\n\tTo resolve this run `set [--db-name : 'your-database-name']`, or type `help` for docs")
 
 		elif arg == "fill":
 			try:
@@ -181,7 +196,7 @@ class CLI(cmd.Cmd):
 				print("sql saved in memory run `sql execute` to run memory.")
 			except AttributeError:
 				print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-				print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
+				print("No database selected\n\tTo resolve this run `set [--db-name : 'your-database-name']`, or type `help` for docs")
 
 		elif arg == "memory":
 			for i in self.sql:
@@ -205,7 +220,7 @@ class CLI(cmd.Cmd):
 					print(f"Successfully created {self.database.db}")
 				else:
 					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-					print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'` and set it to a valid database, or type `help` for docs")
+					print("Database does not exist\n\tTo resolve this run `set [--db-name : 'your-database-name']` and set it to a valid database, or type `help` for docs")
 
 		elif arg == "clear":
 			self.sql = []
@@ -228,20 +243,79 @@ class CLI(cmd.Cmd):
 
 				file_name = args.file_name
 
+			file_name = file_name.removeprefix("/")
+			file_name = file_name.removesuffix(".sql")
 			file_name = file_name.replace(" ", "_")
 			file_name = file_name.replace("\\", "_")
 			file_name = file_name.replace(".", "-")
 
+			arg = arg.removeprefix("export ")
 			# save sql to file
-			with open(f"sql/{file_name}.sql", "w") as file:
-				num_lines = 0
-				# save every line of sql
-				for statement in self.sql:
-					file.write(statement)
-					file.write("\n")
-					num_lines += 1
-				# confirmation note
-				print(f"Successfully saved {num_lines} sql statements to {file_name}.sql")
+			try:
+				with open(f"sql/{file_name}.sql", "w") as file:
+					num_lines = 0
+					# save every line of sql
+					for statement in self.sql:
+						file.write(statement)
+						file.write("\n")
+						num_lines += 1
+					# confirmation note
+					print(f"Successfully saved {num_lines} sql statements to {file_name}.sql")
+			except FileNotFoundError:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql export {arg}`{self.color.neutral}")
+				print("File not found\n\tTo resolve this, double check your file path, and ensure that the files is a .sql file")
+				return
+			except PermissionError:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql export {arg}`{self.color.neutral}")
+				print("Permission denied\n\tTo resolve this, double check your file path, and ensure that you have write permissions")
+				return
+
+		elif "import" in arg:
+			# set the file name
+			if "import" != arg.strip():
+				parser = argparse.ArgumentParser(prog="setFileName", add_help=False)
+				parser.add_argument("--file-name", "-f", required=False)
+
+				arg = arg.removeprefix("import ")
+				try:
+					args = parser.parse_args(shlex.split(arg))
+				except SystemExit:
+					return
+
+				file_name = args.file_name
+			else:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
+				print("No file specified\n\tTo resolve this, run `sql import [--file-name : 'name']`, or type `help` for docs")
+				return
+
+			arg = arg.removeprefix("import ")
+			file_name = file_name.replace(" ", "_")
+			file_name = file_name.replace("\\", "_")
+
+			if not file_name.endswith(".sql"):
+				print(f"{self.color.get_color("error")}ERROR: in command `sql import {arg}`{self.color.neutral}")
+				print("File not .sql format\n\tTo resolve this, double check your file path, and ensure that the files is a .sql file")
+				return
+
+			# save sql to file
+			try:
+				with open(f"{file_name}", "r") as file:
+					sql_statements = [e + ";" for e in file.read().split(";") if e.strip() != ""]
+					if len(sql_statements) <= 0:
+						print(f"{self.color.get_color("error")}ERROR: in command `sql import {arg}`{self.color.neutral}")
+						print("File is empty\n\tTo resolve this, double check your file path, and ensure there is content in your .sql file")
+						return
+
+					num_lines = 0
+					self.sql = sql_statements
+					for i in self.sql:
+						print(i)
+						num_lines += 1
+					print(f"Successfully saved {num_lines} sql statements from {file_name} to memory")
+			except FileNotFoundError:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql import {arg}`{self.color.neutral}")
+				print("File not found\n\tTo resolve this, double check your file path, and ensure that the files is a .sql file")
+				return
 
 		else:
 			self.sql = [arg]
@@ -253,10 +327,9 @@ class CLI(cmd.Cmd):
 	def do_quit(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`quit` command:" + self.color.neutral)
-			print("\tQuit from JSON PARSER")
-			print("\tAll settings will be saved, but all sql in memory will be lost")
+			print("\t`quit`: Quit from JSON PARSER; all settings will be saved, but all sql in memory will be lost")
 			return False
-		confirm = input("Confirm quit? [y]es/[N]o : ")
+		confirm = input(f"{self.color.get_color("prompt")}Confirm quit? [y]es/[N]o :{self.color.neutral} ")
 
 		if "y" in confirm.lower():
 			self.database.save_config()
