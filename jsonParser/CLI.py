@@ -47,37 +47,39 @@ class CLI(cmd.Cmd):
 			print("\tEach command will have a brief description with it")
 			return
 		print(r"'' = insert your string")
-		print(r"[] = one element")
+		print(r"[flag:input] = flag")
 		print(r"|| = or")
 		print(r"?? = optional")
 		print()
-		print(self.color.get_color("header") + r"COMMAND                             ║  DESCRIPTION                                                           " + self.color.neutral)
-		print(r"help                               ║  lists all commands and their descriptions")
-		print(r"set [--db-name 'name']             ║  set the databases name")
-		print(r"set [--json 'path']                ║  set the datapath")
-		print(r"set [--recursion-depth 'integer']  ║  set the maximum number of recursive loops")
-		print(r"get                                ║  show config variables")
-		print(r"read ['path']??                    ║  read data from data/data.json or specified path (must be json file)")
-		print(r"sql [create || fill]               ║  generate the 'CREATE' sql or the 'INSERT' sql and save to memory")
-		print(r"sql memory                         ║  show what is in the sql memory")
-		print(r"sql execute                        ║  execute the sql that is in memory")
-		print(r"sql clear                          ║  clear sql in memory")
-		print(r"sql 'sql'                          ║  save your own sql to memory")
-		print(r"quit                               ║  exit JSON PARSER")
-		print(r"'any-command' ?                    ║  give a more complete description about the command")
+		print(self.color.get_color("header") + r"COMMAND                              ║  DESCRIPTION                                                           " + self.color.neutral)
+		print(r"help                                 ║  lists all commands and their descriptions")
+		print(r"set [--db-name : 'name']             ║  set the databases name")
+		print(r"set [--json : 'path']                ║  set the datapath")
+		print(r"set [--recursion-depth : 'integer']  ║  set the maximum number of recursive loops")
+		print(r"get                                  ║  show config variables")
+		print(r"read 'path'??                        ║  read data from data/data.json or specified path (must be json file)")
+		print(r"sql create                           ║  generate the 'CREATE' sql and save to memory")
+		print(r"sql fill                             ║  generate the 'INSERT' sql and save to memory")
+		print(r"sql memory                           ║  show what is in the sql memory")
+		print(r"sql execute                          ║  execute the sql that is in memory")
+		print(r"sql clear                            ║  clear sql in memory")
+		print(r"sql export [--file-name : 'name']??  ║  export the sql in memory into a file")
+		print(r"sql 'sql'                            ║  save your own sql to memory")
+		print(r"quit                                 ║  exit JSON PARSER")
+		print(r"'any-command' ?                      ║  give a more complete description about the command")
 		print()
 		print(self.color.get_color("header") + r"JSON PARSER: created by sswagger" + self.color.neutral)
 
 	def do_set(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`set` command:" + self.color.neutral)
-			print("\t`set [--db-name 'name']?? [--json 'path']?? [--recursion-depth 'integer']??`")
+			print("\t`set [--db-name || -n : 'name']?? [--json || -j : 'path']?? [--recursion-depth || -r : 'integer']??`")
 			print("\tThis command will sets the config variables for future commands")
 			return
 		parser = argparse.ArgumentParser(prog="setdb", add_help=False)
-		parser.add_argument("--db-name", required=False)
-		parser.add_argument("--json", required=False)
-		parser.add_argument("--recursion-depth", required=False)
+		parser.add_argument("--db-name", "-n", required=False)
+		parser.add_argument("--json", "-j", required=False)
+		parser.add_argument("--recursion-depth", "-r", required=False)
 
 		try:
 			args = parser.parse_args(shlex.split(arg))
@@ -98,7 +100,7 @@ class CLI(cmd.Cmd):
 	def do_get(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`get` command:" + self.color.neutral)
-			print("\t`get [json || db-name || recursion-depth || sql]??`")
+			print("\t`get json || db-name || recursion-depth || sql??`")
 			print("\tThis command will show you the current config settings")
 			return
 
@@ -119,13 +121,16 @@ class CLI(cmd.Cmd):
 	def do_read(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`read` command:" + self.color.neutral)
-			print("\t`read ['path']??`")
-			print("\tThis command will read the data from the database")
-			print("\tIf both are set then it will automatically read the data")
+			print("\t`read 'path'??`")
+			print("\tread data a specified path (must be json file), default path is whatever is specified in the configs")
 			return
 
 		try:
 			if arg != '':
+				if not arg.endswith('.json'):
+					print(f"{self.color.get_color("error")}ERROR: in command `read {arg}`{self.color.neutral}")
+					print("File not .json format\n\tTo resolve this, double check your file path, and ensure that the files is a .json file")
+					return
 				print("setting datapath to " + arg)
 				self.database.datapath = "arg"
 			print(f"reading json from {self.database.datapath}...")
@@ -139,12 +144,13 @@ class CLI(cmd.Cmd):
 	def do_sql(self, arg: str):
 		if "?" in arg:
 			print(self.color.get_color("header") + "`sql` command:" + self.color.neutral)
-			print("\t`sql [create || fill || memory || execute || clear || 'sql']`")
+			print("\t`sql create || fill || memory || execute || clear || export [--file-name || -f : 'name'] || 'sql'`")
 			print("\t`sql create`: generate the 'CREATE TABLE' sql and save to memory")
 			print("\t`sql fill`: generate the 'INSERT INTO TABLE' sql and save to memory")
 			print("\t`sql memory`: read sql in memory")
 			print("\t`sql execute`: run the sql that is in memory")
 			print("\t`sql clear`: clear memory")
+			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file, default file name is the current datetime")
 			print("\t`sql ['sql']`: save your own sql to memory")
 			return
 
@@ -211,7 +217,7 @@ class CLI(cmd.Cmd):
 			# if the user specifies a different name, the re-set the file name
 			if "export" != arg.strip():
 				parser = argparse.ArgumentParser(prog="setFileName", add_help=False)
-				parser.add_argument("--file-name", required=False)
+				parser.add_argument("--file-name", "-f", required=False)
 
 				arg = arg.removeprefix("export ")
 				try:
