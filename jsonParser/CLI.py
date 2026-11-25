@@ -1,5 +1,6 @@
 #=== Imported Modules ===#
 import cmd
+from datetime import datetime
 import mysql.connector
 from model.color import Color
 from model.JsonParser import JsonParser
@@ -147,68 +148,96 @@ class CLI(cmd.Cmd):
 			print("\t`sql ['sql']`: save your own sql to memory")
 			return
 
-		match arg:
-			case "create":
-				try:
-					self.sql = []
-					for i in self.database.create_db_schema():
-						self.sql.append(i.create_sql())
-						print(i.create_sql())
-
-					print("\nsql saved in memory run `sql execute` to run memory.")
-				except AttributeError:
-					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-					print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
-
-			case "fill":
-				try:
-					self.sql = []
-					# load tables into database object
-					self.database.create_db_schema()
-					insert_sql = self.database.fill_db()
-
-					insert_sql = insert_sql.split("\n")
-					for i in insert_sql:
-						self.sql.append(i)
-						print(i)
-					print("sql saved in memory run `sql execute` to run memory.")
-				except AttributeError:
-					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-					print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
-
-			case "memory":
-				for i in self.sql:
-					print(i)
-
-				if len(self.sql) == 0:
-					print()
-					print("There is no sql in memory, run `sql create` or `sql fill` to save sql to memory")
-
-			case "execute":
-				try:
-					for i in self.sql:
-						self.database.execute_sql(i)
-					print("All sql successfully run")
-				except mysql.connector.Error as e:
-					print(e.msg)
-
-					new_db = input(f"Databases does not exist. Do you want to create a new one called {self.database.db}? [Y]es/[n]o : ")
-					if new_db == "y":
-						self.database.create_db()
-						print(f"Successfully created {self.database.db}")
-					else:
-						print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
-						print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'` and set it to a valid database, or type `help` for docs")
-
-			case "clear":
+		if arg == "create":
+			try:
 				self.sql = []
-				print("sql memory cleared successfully")
+				for i in self.database.create_db_schema():
+					self.sql.append(i.create_sql())
+					print(i.create_sql())
 
-			case _:
-				self.sql = [arg]
-				print(f"{arg}\n")
-				print("sql saved to memory successfully")
-				print("run `sql execute` to run your sql")
+				print("\nsql saved in memory run `sql execute` to run memory.")
+			except AttributeError:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
+				print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
+
+		elif arg == "fill":
+			try:
+				self.sql = []
+				# load tables into database object
+				self.database.create_db_schema()
+				insert_sql = self.database.fill_db()
+
+				insert_sql = insert_sql.split("\n")
+				for i in insert_sql:
+					self.sql.append(i)
+					print(i)
+				print("sql saved in memory run `sql execute` to run memory.")
+			except AttributeError:
+				print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
+				print("No database selected\n\tTo resolve this run `set --db-name 'your-database-name'`, or type `help` for docs")
+
+		elif arg == "memory":
+			for i in self.sql:
+				print(i)
+
+			if len(self.sql) == 0:
+				print()
+				print("There is no sql in memory, run `sql create` or `sql fill` to save sql to memory")
+
+		elif arg == "execute":
+			try:
+				for i in self.sql:
+					self.database.execute_sql(i)
+				print("All sql successfully run")
+			except mysql.connector.Error as e:
+				print(e.msg)
+
+				new_db = input(f"Databases does not exist. Do you want to create a new one called {self.database.db}? [Y]es/[n]o : ")
+				if new_db == "y":
+					self.database.create_db()
+					print(f"Successfully created {self.database.db}")
+				else:
+					print(f"{self.color.get_color("error")}ERROR: in command `sql {arg}`{self.color.neutral}")
+					print("Database does not exist\n\tTo resolve this run `set --db-name 'your-database-name'` and set it to a valid database, or type `help` for docs")
+
+		elif arg == "clear":
+			self.sql = []
+			print("sql memory cleared successfully")
+
+		elif "export" in arg:
+			# set file name to current time
+			file_name = str(datetime.now())
+
+			# if the user specifies a different name, the re-set the file name
+			if "export" != arg.strip():
+				parser = argparse.ArgumentParser(prog="setFileName", add_help=False)
+				parser.add_argument("--file-name", required=False)
+
+				arg = arg.removeprefix("export ")
+				try:
+					args = parser.parse_args(shlex.split(arg))
+				except SystemExit:
+					return
+
+				file_name = args.file_name
+
+			# save sql to file
+			with open(f"sql/{file_name}.sql", "w") as file:
+				num_lines = 0
+				# save every line of sql
+				for statement in self.sql:
+					file.write(statement)
+					file.write("\n")
+					num_lines += 1
+				# confirmation note
+				print(f"Successfully saved {num_lines} sql statements to {file_name}.sql")
+
+		else:
+			self.sql = [arg]
+			print(f"{arg}\n")
+
+			print("sql saved to memory successfully")
+			print("run `sql execute` to run your sql")
 
 	def do_quit(self, arg: str):
 		if "?" in arg:
