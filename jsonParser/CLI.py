@@ -22,7 +22,7 @@ class CLI(cmd.Cmd):
 		r"║  ||      ||  ||  || ||       ||  ||      || ||   ║" + "\n"
 		r"║  ||      ||  ||  ||  ||  ||||/    \||||  ||  ||  ║" + "\n"
 		r"╠══════════════════════════════════════════════════╣" + "\n"
-		r"║ Recursively parses data/data.json into MySQL DB. ║" + "\n"
+		r"║               Created by sswagger                ║" + "\n"
 		r"╚══════════════════════════════════════════════════╝" + "\n"
      )
 
@@ -165,7 +165,7 @@ class CLI(cmd.Cmd):
 			print("\t`sql memory`: read sql in memory")
 			print("\t`sql execute`: run the sql that is in memory")
 			print("\t`sql clear`: clear memory")
-			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file; default file name is the current datetime")
+			print("\t`sql export [--file-name || -f : 'name']??`: exports the sql in memory to a file under the sql/ folder; default file name is the current datetime")
 			print("\t`sql import [--file-name || -f : 'name']`: imports sql statements from a specified file")
 			print("\t`sql 'sql'`: save your own sql to memory")
 			return
